@@ -1,0 +1,44 @@
+
+.violeta{
+    color: violet;
+}
+.verde{
+    color: green;
+}
+.rojo{
+    color:red;
+}
+.azul{
+    color:blue;
+}
+.azulOscuro{
+    color:darkblue;
+}
+.rojoOscuro{
+    color: darkred;
+}
+h2{
+    font-weight: bold;
+    font-size:x-large;
+    margin: 10px;
+    text-align: center;
+    border-bottom: solid;
+    border-width: 2px;
+}
+img{
+    width: 40%;
+    height: 50%;
+    margin:10px;
+}
+h3{
+    font-size: 125%;
+    color:darken($color: #000000c5, $amount: 0);
+    margin: 10px;
+}
+p{
+    font-size: 125%;
+    color:darken($color: #000000c5, $amount: 0);
+    margin: 10px;
+    height: 300px;
+    width: 50%;
+}

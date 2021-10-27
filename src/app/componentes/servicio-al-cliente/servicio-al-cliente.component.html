@@ -1,0 +1,61 @@
+<div *ngIf="!estado">
+    <form [formGroup]="formulario" (ngSubmit)="validacion2()" novalidate>
+    <ul>
+       <li>
+        <label>Nombre Completo</label>
+        <input id="nombre" type="text" formControlName="nombre" placeholder="Pepito juan Perez Gonzales">
+        <div *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)" class="alert alert-danger">
+            <div *ngIf="formulario.controls['nombre'].hasError('required')">
+              * Nombre obligatorio
+            </div> 
+            <div *ngIf="formulario.controls['nombre'].hasError('maxlength')">
+              * Tamaño máximo de 50
+            </div>  
+       </div>
+      </li>
+      <li>
+        <label>Telefono</label>
+        <input id="telefono" type="text" formControlName="telefono" placeholder="(+569)">
+        <div *ngIf="formulario.controls['telefono'].invalid && (formulario.controls['telefono'].dirty || formulario.controls['telefono'].touched)" class="alert alert-danger">
+            <div *ngIf="formulario.controls['telefono'].hasError('required')">
+              * Telefono obligatorio
+            </div> 
+            <div *ngIf="formulario.controls['telefono'].hasError('maxlength')">
+              * Deben ser 8 digitos
+            </div>  
+       </div>
+      </li>
+      <li>
+        <label>Email</label>
+        <input id="email" type="text" formControlName="email">
+        <div *ngIf="formulario.controls['email'].invalid && (formulario.controls['email'].dirty || formulario.controls['email'].touched)" class="alert alert-danger">
+            <div *ngIf="formulario.controls['email'].hasError('required')">
+              * Email obligatorio
+            </div> 
+       </div>
+      </li>
+      <li>
+        <label>Dirigido a</label>
+        <select id="opcion" formControlName="opcion">
+            <option value="contenido">Contenidos</option>
+            <option value="publicidad">Publicidad</option>
+            <option value="sugerencias">Sugerencias</option>
+            <option value="suscripciones">Suscripciones Digitales</option>
+        </select>
+      </li>
+      <li>
+        <label>Mensaje</label>
+        <textarea id="texto" formControlName="mensaje" cols="50" rows="10"></textarea>
+        <div *ngIf="formulario.controls['mensaje'].invalid && (formulario.controls['mensaje'].dirty || formulario.controls['mensaje'].touched)" class="alert alert-danger">
+            <div *ngIf="formulario.controls['mensaje'].hasError('required')">
+              * Mensaje obligatorio
+            </div> 
+       </div>
+      </li>
+      <li><button type="submit" class="btn" [disabled]="formulario.invalid">Enviar</button></li>
+      </ul>
+   </form>
+</div>
+<div *ngIf="estado">
+    <h2>Mensaje enviado</h2>
+</div>

@@ -1,0 +1,21 @@
+ul{
+    background-color: rgb(37, 37, 37);
+}
+ul li{
+    position: relative;
+    left: 43%;
+}
+a{
+    border:solid;
+    border-width: 1px;
+    color:white;
+    margin: 10px;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #3f3f3f;
+}
+img{
+    height: 400px;
+    width: 100%;
+}

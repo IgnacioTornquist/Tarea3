@@ -1,0 +1,34 @@
+
+<ul id="noticiasDestacadas" >
+    <li *ngFor="let noticia of ListaNoticias ; let i = index">
+        <div *ngIf="i==0">
+            <img id="imagenDestacada" src="../../../assets/{{noticia.imagen}}">
+            <h2 id="titulo" style="color: green;">{{noticia.titulo}}</h2>
+            <p id="texto">{{noticia.texto}}</p>
+            <a class="button"[routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" style="background-color: green;">Leer Mas</a>
+        </div>
+        <div *ngIf="i==1">
+            <img id="imagenDestacada" src="../../../assets/{{noticia.imagen}}">
+            <h2 id="titulo" style="color: blue;">{{noticia.titulo}}</h2>
+            <p id="texto">{{noticia.texto}}</p>
+            <a class="button" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" style="background-color: blue;">Leer Mas</a>
+        </div> 
+        <div *ngIf="i==2">
+            <img id="imagenDestacada" src="../../../assets/{{noticia.imagen}}">
+            <h2 id="titulo" style="color: violet;">{{noticia.titulo}}</h2>
+            <p id="texto">{{noticia.texto}}</p>
+            <a class="button"  [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" style="background-color: violet;">Leer Mas</a>
+        </div>    
+    </li>
+</ul>
+<ul id="noticias" >
+    <li *ngFor="let noticia of ListaNoticias ; let i = index">
+        <div *ngIf="i>2">
+            <img id="imagen" src="../../../assets/{{noticia.imagen}}">
+            <h2 id="titulo2">{{noticia.titulo}}</h2>
+            <p id="texto2">{{noticia.texto}}</p>
+            <a class="button" [routerLink]="['/detalleNoticia',noticia.id]" routerLinkActive="router-link-active" 
+            style="background-color: white; color: gray; border:solid; border-width: 2px; position: relative; left: 15%;">Leer Mas</a>
+        </div>
+    </li>
+</ul>

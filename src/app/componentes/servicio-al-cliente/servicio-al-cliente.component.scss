@@ -1,0 +1,46 @@
+ul{
+    margin: 10px;
+    width: auto;
+    height: auto;
+    list-style: none;
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px;
+}
+ul li{
+    margin: 30px;
+}
+#nombre{
+    width: 300px;
+    margin-left: 50px;
+}
+#telefono{
+    width: 250px;
+    margin-left: 110px;
+}
+#email{
+    width: 250px;
+    margin-left: 129px;
+}
+#opcion{
+    margin-left: 105px;
+}
+#texto{
+    margin-left: 110px;
+}
+label {
+    vertical-align: top;
+}
+.btn{
+    background-color: gray;
+}
+h2{
+    height: 40px;
+    font-size: xx-large;
+    margin: 50px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px;
+    color:springgreen;
+    text-align: center;
+}
